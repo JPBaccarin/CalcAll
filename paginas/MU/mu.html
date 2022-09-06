@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movimento Uniforme</title>
     <link rel="stylesheet" href="/css/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
 </head>
 
 <body class="bg-secondary text-white">
@@ -41,6 +41,50 @@
 
     <!--area da calculadora-->
     <div class="container-lg mt-2 p-3 text-white bg-dark bg-opacity-25">
+        <!--Textos-->
+        <h2 class="text-center">Movimento Uniforme</h2><br>
+        <h3 class=" text-center">Velocidade média</h3><br>
+        <p class="text-center">VM=∆S/∆T</p><br>
+        <p>VM= Velocidade média(m/s) - ∆S=Variação da posição(m) - ∆T=Variação do tempo(s)</p>
+        <p>No sistema internacional a unidade desta grandeza é (m/s) mas também é comum apresentá-la em km/h. 
+            veja como fazer a conversão:</p>
+        <p class="text-center">m/s→km/h × 3,6   
+            </p>
+        <p class="text-center">km/h→m/s ÷ 3,6</p>
+        <h3 class="text-center">Exemplos</h3>
+        <p>Alonso decidiu passear pelas cidade proximas da região onde mora para conhecer os locais, ele gatou 2h percorrendo uma distância de 120km. Que velocidade Alonso estava em seu passeio?</p>
+        <p class="text-center">VM = 120/2  = 60km/h <br>
+            60/3,6  = 16,66m/s
+            </p>
+        <h3 class="text-center">Aceleração média</h3>
+        <p class="text-center">am=∆v/∆t <br>
+            am=ACELERAÇÃO MÉDIA (m/s²) <br> 
+            ∆v=VARIAÇÃO DA VELOCIDADE (m/s) (v final - v inicial) <br>
+            ∆t= VARIAÇÃO DO TEMPO (s) (TEMPO FINAL - TEMPO INICIAL) <br>
+            </p>
+        <h3 class="text-center">Exemplos</h3>
+        <p>Determine o módulo da aceleração, em m/s², de um móvel que gatou 2s para aumentar sua velocidade, de 32,4km/h para 75,6km/h<br>
+            </p>
+            <p class="text-center">75,6/3,6  = 21m/s/    <br>   32,4/3,6  = 9 m/s/    <br>    a = 21-9/2  = 12/2  = 6m/s²/</p>
+        <h3 class="text-center">Função horário do deslocamento</h3>
+        <p class="text-center">S=S0+V.∆t <br> 
+            S=POSIÇÃO FINAL (m) <br>
+            S0=POSIÇÃO INICIAL (m) <br>
+            V=VELOCIDADE (m/s) <br>
+            ∆t =VARIAÇÃO DO TEMPO (s) <br>
+        </p>
+        <p>No movimento uniforme a velocidade média terá o mesmo valor da velocidade em cada instante(Velocidade instantânea), pois seu valor é sempre igual. assim,temos.</p>
+        <p class="text-center">V=VM=∆s/t</p>
+        <h3 class="text-center">Exemplos</h3>
+        
+        <!--apagar essa parte e substituir o exemplo-->
+        <p> Um carro viaja a 90km/h (25m/s) partindo do SO=104 km. Qual o espaço final após 1min 48?</p>
+        <p class="text-center">∆t=60+48=108s <br> 
+            S=124.000+25×108=126.700m <br>
+            S=126,7km 
+            </p>
+        <!--apagar essa parte e substituir o exemplo-->
+
         <!--botões de seleção-->
         <div class="btn-group">
             <a class="btn btn-primary" data-bs-toggle="collapse" href="#VelocidadeM" role="button" aria-expanded="false"
@@ -56,13 +100,14 @@
             <div class="col">
                 <div class="collapse multi-collapse" id="VelocidadeM">
                     <div class="card card-body text-white bg-dark bg-opacity-25">
+                        <p>VM=m/s | ΔS=m |  ΔT=s</p>
                         <div class="card card-body text-white bg-dark bg-opacity-25">
                             <!--inputs-->
                             <div class="input-group mb-3">
                                 <input class="form-control" type="number" name="VM" id="VM"
-                                    placeholder="Velocidade média">
-                                <input class="form-control" type="number" name="DS" id="DS" placeholder="ΔS">
-                                <input class="form-control" type="number" name="DT" id="DT" placeholder="ΔT">
+                                    placeholder="VM">
+                                <input class="form-control" type="number" name="DS" id="DS" placeholder= "ΔS">
+                                <input class="form-control" type="number" name="DT" id="DT" placeholder= "ΔT">
                             </div>
                             <!--botões de calcular-->
                             <div class="btn-group" role="group" aria-label="Basic example">
@@ -76,11 +121,12 @@
             <div class="col">
                 <div class="collapse multi-collapse" id="AceleraçãoM">
                     <div class="card card-body text-white bg-dark bg-opacity-25">
+                        <P>AM=m/s² |  ΔV=m/s |  ΔT=s</P>
                         <div class="card card-body text-white bg-dark bg-opacity-25">
                             <!--inputs-->
                             <div class="input-group mb-3">
                                 <input class="form-control" type="number" name="AM" id="AMa"
-                                    placeholder="Aceleração média ">
+                                    placeholder="AM">
                                 <input class="form-control" type="number" name="DV" id="DVa" placeholder="ΔV">
                                 <input class="form-control" type="number" name="DT" id="DTa" placeholder="ΔT">
                             </div>
@@ -98,6 +144,7 @@
             <div class="col mt-2">
                 <div class="collapse multi-collapse" id="FHD">
                     <div class="card card-body text-white bg-dark bg-opacity-25">
+                        <p>S=m | So=m | V=m/s | T=s</p>
                         <div class="card card-body text-white bg-dark bg-opacity-25">
                             <!--inputs-->
                             <div class="input-group mb-3">
