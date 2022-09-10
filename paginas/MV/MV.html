@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimento Vertical</title>
+    <link rel="stylesheet" href="/css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
+</head>
+
+<body class="bg-secondary text-white">
+    <!--cabeçalho-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid " style="margin: 0 20px 0 20px; ">
+            <a class="navbar-brand" href="/index.html"> <img src="/assets/logo2.svg" alt=""> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="javascript:void(0)">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="javascript:void(0)">Sobre nós</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="pesquisar">
+                    <button class="btn btn-primary" type="button">pesquisar</button>
+                    <!--https://www.youtube.com/watch?v=nCX3QVl_PiI&ab_channel=TheNetNinja-->
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--area-->
+    <div class="container-lg mt-2 p-3 text-white bg-dark bg-opacity-25">
+        <!--texto-->
+        <div class="container-flex"></div>
+
+        <div class="btn-group">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#QuedaLivre"
+                aria-expanded="false" aria-controls="Torriceli">Queda Livre</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#LançamentoVertical"
+                aria-expanded="false" aria-controls="FHV">Lançamento Vertical</button>
+        </div>
+
+        <!--area da queda livre-->
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="QuedaLivre">
+                    <div class="btn-group mt-3">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#VelocidadeM" role="button"
+                            aria-expanded="false" aria-controls="VelocidadeM">Velocidade Média</a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#AceleraçãoM" aria-expanded="false" aria-controls="AceleraçãoM">Aceleração
+                            Média</button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#FHD"
+                            aria-expanded="false" aria-controls="FHD">FHD</button>
+                    </div>
+                    </p>
+                    <!-- da calculadora-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="VelocidadeM">
+                                <div class="card card-body text-white bg-dark bg-opacity-25">
+                                    <p>VM=m/s | ΔS=m | ΔT=s</p>
+                                    <div class="card card-body text-white bg-dark bg-opacity-25">
+                                        <!--inputs-->
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" type="number" name="VM" id="VM"
+                                                placeholder="VM">
+                                            <input class="form-control" type="number" name="DS" id="DS"
+                                                placeholder="ΔS">
+                                            <input class="form-control" type="number" name="DT" id="DT"
+                                                placeholder="ΔT">
+                                        </div>
+                                        <!--botões de calcular-->
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button class="btn btn-outline-primary" type="submit"
+                                                id="calc_vm">calcular</button>
+                                            <button class="btn btn-outline-primary" type="submit"
+                                                id="reset">resetar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="AceleraçãoM">
+                                <div class="card card-body text-white bg-dark bg-opacity-25">
+                                    <P>AM=m/s² | ΔV=m/s | ΔT=s</P>
+                                    <div class="card card-body text-white bg-dark bg-opacity-25">
+                                        <!--inputs-->
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" type="number" name="AM" id="AMa"
+                                                placeholder="AM">
+                                            <input class="form-control" type="number" name="DV" id="DVa"
+                                                placeholder="ΔV">
+                                            <input class="form-control" type="number" name="DT" id="DTa"
+                                                placeholder="ΔT">
+                                        </div>
+                                        <!--botões de calcular-->
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button class="btn btn-outline-primary" type="submit"
+                                                id="calc_am">calcular</button>
+                                            <button class="btn btn-outline-primary" type="submit"
+                                                id="reset2">resetar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-2">
+                            <div class="collapse multi-collapse" id="FHD">
+                                <div class="card card-body text-white bg-dark bg-opacity-25">
+                                    <p>S=m | So=m | V=m/s | T=s</p>
+                                    <div class="card card-body text-white bg-dark bg-opacity-25">
+                                        <!--inputs-->
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" type="number" id="S" placeholder="S">
+                                            <input class="form-control" type="number" id="So" placeholder="So">
+                                            <input class="form-control" type="number" id="V" placeholder="V">
+                                            <input class="form-control" type="number" id="T" placeholder="T">
+                                        </div>
+                                        <!--botões de calcular-->
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button class="btn btn-outline-primary" type="submit"
+                                                id="calc_fhd">calcular</button>
+                                            <button class="btn btn-outline-primary" type="submit"
+                                                id="reset3">resetar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--area do lançamento vertical-->
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="LançamentoVertical">
+                        <div class="btn-group mt-3">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Torriceli" aria-expanded="false" aria-controls="Torriceli">Equação de
+                                Torricelli</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#FHP" aria-expanded="false" aria-controls="FHP">Função horaria da
+                                posição</button>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#FHV" aria-expanded="false" aria-controls="FHV">Função horaria da
+                                velocidade</button>
+                        </div>
+                        </p>
+                        <!-- da calculadora-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="Torriceli">
+                                    <div class="card card-body text-white bg-dark bg-opacity-25">
+                                        <div class="card card-body text-white bg-dark bg-opacity-25">
+                                            <!--inputs-->
+                                            <div class="input-group mb-3">
+                                                <input class="form-control" type="number" id="V" placeholder="V²">
+                                                <input class="form-control" type="number" id="Vo" placeholder="Vo²">
+                                                <input class="form-control" type="number" id="dois"
+                                                    placeholder="(+/-)2">
+                                                <input class="form-control" type="number" id="A" placeholder="G">
+                                                <input class="form-control" type="number" id="ΔS" placeholder="ΔS">
+                                            </div>
+                                            <!--botões de calcular-->
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button class="btn btn-outline-primary" type="submit"
+                                                    id="calc_T">calcular</button>
+                                                <button class="btn btn-outline-primary" type="submit"
+                                                    id="reset">resetar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="FHP">
+                                    <div class="card card-body text-white bg-dark bg-opacity-25">
+                                        <div class="card card-body text-white bg-dark bg-opacity-25">
+                                            <!--inputs-->
+                                            <div class="input-group mb-3">
+                                                <input class="form-control" type="number" id="S_2" placeholder="S">
+                                                <input class="form-control" type="number" id="So_2" placeholder="So">
+                                                <input class="form-control" type="number" id="Vo_2" placeholder="Vo">
+                                                <input class="form-control" type="number" id="T_2" placeholder="T">
+                                                <input class="form-control" type="number" name="A" id="A_2"
+                                                    placeholder="g">
+                                                <input class="form-control" type="number" name="T" id="T2_2"
+                                                    placeholder="T²">
+                                            </div>
+                                            <!--botões de calcular-->
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button class="btn btn-outline-primary" type="submit"
+                                                    id="calc_FHP">calcular</button>
+                                                <button class="btn btn-outline-primary" type="submit"
+                                                    id="reset_2">resetar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mt-2">
+                                <div class="collapse multi-collapse" id="FHV">
+                                    <div class="card card-body text-white bg-dark bg-opacity-25">
+                                        <div class="card card-body text-white bg-dark bg-opacity-25">
+                                            <!--inputs-->
+                                            <div class="input-group mb-3">
+                                                <input class="form-control" type="number" id="V_3" placeholder="V">
+                                                <input class="form-control" type="number" id="Vo_3" placeholder="Vo">
+                                                <input class="form-control" type="number" id="A_3" placeholder="A">
+                                                <input class="form-control" type="number" id="T_3" placeholder="T">
+                                            </div>
+                                            <!--botões de calcular-->
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button class="btn btn-outline-primary" type="submit"
+                                                    id="calc_V">calcular</button>
+                                                <button class="btn btn-outline-primary" type="submit"
+                                                    id="reset_3">resetar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!--botões de seleção de tipo de movimento-->
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
